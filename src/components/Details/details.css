@@ -1,0 +1,173 @@
+/* Full-width container */
+.details-container {
+    width: 100%;
+    padding: 20px;
+    box-sizing: border-box;
+  }
+  
+  /* Header: "Our Companies" on the left, Search on the right */
+  .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+  }
+  
+  /* Search box */
+  .search-box {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 250px;
+    font-size: 16px;
+  }
+  
+  /* Horizontal line */
+  hr {
+    margin: 20px 0;
+    border: 0;
+    height: 2px;
+    background: #ddd;
+    width: 100%;
+  }
+  
+  /* Grid layout for company cards */
+  .grid-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 equal columns */
+    gap: 20px;
+    width: 100%; /* Ensure grid takes full width */
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  /* Individual company card */
+  .grid-item {
+    background: #f4f4f4;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+    width: 100%; /* Ensure each item fills the column width */
+  }
+  
+  /* Share Icon (Top Right) */
+  .share-icon {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    color: #777;
+    cursor: pointer;
+    font-size: 18px;
+  }
+  
+  /* Left side: Logo, City, Projects */
+  .left {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  
+  .logo {
+    width: 60px;
+    height: 60px;
+    border: 2px solid #777;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 30px;
+    background: white;
+  }
+  
+  .left p {
+    margin: 5px 0;
+    font-size: 14px;
+    color: #555;
+  }
+  
+  /* Right side: Heading, Rating, Heart */
+  .right {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+  }
+  
+  .right h4 {
+    margin: 0;
+    font-size: 18px;
+    color: #333;
+  }
+  
+  /* Star rating */
+  .rating {
+    display: flex;
+  }
+  
+  .filled-star {
+    color: gold;
+    margin-right: 3px;
+  }
+  
+  .empty-star {
+    color: #ccc;
+    margin-right: 3px;
+  }
+  
+  /* Heart icon and text */
+  .heart {
+    display: flex;
+    align-items: center;
+    margin-top: 5px;
+  }
+  
+  .heart-icon {
+    color: red;
+    margin-right: 5px;
+  }
+  
+  /* Description text */
+  .description {
+    font-size: 14px;
+    color: #666;
+    margin-top: 5px;
+  }
+  
+  /* Visit Page button */
+  .visit-btn {
+    background: #007bff;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+    margin-top: auto;
+    align-self: center;
+  }
+  
+  .visit-btn:hover {
+    background: #0056b3;
+  }
+  
+  /* Responsive: 2 columns on tablets */
+  @media (max-width: 1024px) {
+    .grid-container {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+  
+  /* Responsive: 1 column on mobile */
+  @media (max-width: 600px) {
+    .grid-container {
+      grid-template-columns: repeat(1, 1fr);
+    }
+  }
+  
